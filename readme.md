@@ -57,7 +57,7 @@ npx webpack
 5. Clicca su un libro per vedere la sua descrizione completa.
 
 In alternativa, puoi visualizzare il progetto direttamente online tramite GitHub Pages:
-[Motore di ricerca libri di Paloma Fuerte](https://PalomaFuerte.github.io/Progetto-JavaScript-advanced-di-Miriam-Paloma-Fuerte-Contreras/)
+[Motore di ricerca libri di Paloma Fuerte](Progetto-JavaScript-Advanced-di-Miriam-Paloma-Fuerte-Contreras)
 
 Puoi anche vedere e provare il motore di ricerca libri online cliccando qui:  
 [Visualizza il motore di ricerca libri su Netlify](https://progetto-javascript-advanced-di-palom.netlify.app/)
