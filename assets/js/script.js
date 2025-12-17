@@ -1,6 +1,14 @@
 import axios from 'axios';
 import _ from 'lodash';
 import '../css/style.css';
+import logo from '../img/logo.png';
+
+document.addEventListener('DOMContentLoaded', () => {
+  const logoImg = document.getElementById('logo');
+  if (logoImg) {
+    logoImg.src = logo;
+  }
+});
 
 const searchBtn = document.getElementById('searchBtn');
 const categoryInput = document.getElementById('categoryInput');
