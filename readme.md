@@ -39,11 +39,22 @@ git clone https://PalomaFuerte.github.io/Progetto-JavaScript-Advanced-di-Miriam-
 ```
 
 2. Apri la cartella del progetto.
+3. Assicurati di avere Node.js installato.
+4. Installa le dipendenze:
+
+```bash
+npm install
+```
+
+5. Avvia Webpack per generare il bundle:
+
+```bash
+npx webpack
+```
+
 3. Apri il file index.hmtl con un browser moderno (Chrome, Firefox, Edge, Safari).
 4. Inserisci una categoria nella barra di ricerca e clicca "Cerca" o premi Enter.
 5. Clicca su un libro per vedere la sua descrizione completa.
-
-**Nota:** Tutti i file necessari (JS, CSS e bundle) sono già inclusi. Non è necessario installare Node.js né generare il bundle per usare l'applicazione localmente.
 
 In alternativa, puoi visualizzare il progetto direttamente online:
 Owly di Paloma Fuerte
