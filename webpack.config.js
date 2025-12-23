@@ -6,9 +6,9 @@ module.exports = {
   entry: './assets/js/script.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'docs'), // carpeta final para GitHub Pages
-    publicPath: '', // paths relativos correctos
-    clean: true, // limpia docs antes de cada build
+    path: path.resolve(__dirname, 'docs'),
+    publicPath: '', 
+    clean: true, 
   },
   mode: 'production',
   module: {
@@ -20,21 +20,21 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader'], // CSS incluido en bundle
+        use: ['style-loader', 'css-loader'], 
       },
       {
         test: /\.(png|jpe?g|gif|svg|ico)$/i,
         type: 'asset/resource',
-        generator: { filename: 'img/[name][ext]' }, // copia imágenes a docs/img/
+        generator: { filename: 'img/[name][ext]' }, 
       },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: './index.html',
-      favicon: './assets/img/favicon.ico', // favicon copiado a docs/
+      favicon: './assets/img/favicon.ico', 
     }),
-    new Dotenv(), // si usas variables de entorno
+    new Dotenv(), 
   ],
-  devtool: 'source-map', // para debug
+  devtool: 'source-map', 
 };
