@@ -1,23 +1,21 @@
 const path = require('path');
 const Dotenv = require('dotenv-webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  
   entry: './assets/js/script.js',
 
-  
   output: {
-    filename: 'bundle.js',               
+    filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
     publicPath: './',
+    clean: true,
   },
 
- 
   mode: 'development',
 
   module: {
     rules: [
-      
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -28,12 +26,12 @@ module.exports = {
           },
         },
       },
-      
+
       {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
       },
-      
+
       {
         test: /\.(png|jpe?g|gif|svg)$/i,
         type: 'asset/resource',
@@ -45,9 +43,13 @@ module.exports = {
   },
 
   plugins: [
-    new Dotenv(), 
+    new Dotenv(),
+
+    new HtmlWebpackPlugin({
+      template: './index.html',
+      inject: 'body', // inserisce <script> prima di </body>
+    }),
   ],
 
-  
   devtool: 'source-map',
 };
